@@ -9,6 +9,9 @@ class Company(models.Model):
     type=models.CharField(max_length=100,choices=(('IT','IT'),('Non-IT','Non-IT'),('Mobiles Phones','Mobiles Phones')))
     added_date = models.DateTimeField(auto_now=True)
     active=models.BooleanField(default=True)
+    
+    def __str__(self):
+        return self.name + ','+ self.location  
         
 
 #Employee Model    
